@@ -1,13 +1,18 @@
 // Globale Valiablen
+let img;
 
 // Die Setup wird 1mal am Anfang ausgefuehrt.
 // Hier definiert ihr Anfangskonfigurationen wie z.B. die Groesse des Canvas
-function setup() {
+window.setup = function () {
   createCanvas(800, 800);
-}
+};
+
+window.preload = function () {
+  img = loadImage("cat.png");
+};
 
 // Die Draw-Funktion wird in einer Endlos-Schleife ausgefuehrt. Hier definiert ihr den Groessteil eures Sketches.
-function draw() {
+window.draw = function () {
   background(220);
 
   // Die Funktion ellipse(x, y, w, h) wird mit den Parametern x,y - Koordinaten und Breite, Hoehe aufgerufen
@@ -19,7 +24,8 @@ function draw() {
   rect(100, 50, 55, 55);
 
   drawGreenSquare(200, 50);
-}
+  image(img, 300, 50);
+};
 
 // hier definieren wir uns eine Funktion, die ein gruenes Rechteck zeichnet
 function drawGreenSquare(x, y) {

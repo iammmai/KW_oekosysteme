@@ -6,12 +6,12 @@ const BIG_SQUARE_SIZE = 60;
 
 // Die Setup wird 1mal am Anfang ausgefuehrt.
 // Hier definiert ihr Anfangskonfigurationen wie z.B. die Groesse des Canvas
-function setup() {
+window.setup = function () {
   createCanvas(CANVAS_SIZE, CANVAS_SIZE);
-}
+};
 
 // Die Draw-Funktion wird in einer Endlos-Schleife ausgefuehrt. Hier definiert ihr den Groessteil eures Sketches.
-function draw() {
+window.draw = function () {
   background(220);
 
   // for (let i = 0; i < NUM_SQUARES; i++) {
@@ -33,7 +33,7 @@ function draw() {
       );
     }
   }
-}
+};
 
 // hier definieren wir uns eine Funktion, die ein gruenes Rechteck zeichnet
 function drawGreenSquare(x, y, size) {

@@ -16,7 +16,7 @@
 
 ## Das Setup
 
-Wir zeichnen mit Hilfe von Programmcode. Wenn das Programm startet wird die Funktion `setup` einmal ausgefuehrt. Im Anschluss durchlauft es standig eine Schleife. Was in dieser Schleife passiert definieren wir in der draw-Funktion.
+Wir zeichnen mit Hilfe von Programmcode. Wenn das Programm startet wird die Funktion `setup` einmal ausgefuehrt. Im Anschluss durchlaeuft es staendig eine Schleife. Was in dieser Schleife passiert definieren wir in der draw-Funktion.
 
 - setup()
 - draw()

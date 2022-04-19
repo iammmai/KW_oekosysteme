@@ -8,12 +8,12 @@ let yTrans = 1;
 
 // Die Setup wird 1mal am Anfang ausgefuehrt.
 // Hier definiert ihr Anfangskonfigurationen wie z.B. die Groesse des Canvas
-function setup() {
+window.setup = function () {
   createCanvas(CANVAS_SIZE, CANVAS_SIZE);
-}
+};
 
 // Die Draw-Funktion wird in einer Endlos-Schleife ausgefuehrt. Hier definiert ihr den Groessteil eures Sketches.
-function draw() {
+window.draw = function () {
   background(220);
 
   if (x > width) {
@@ -30,7 +30,7 @@ function draw() {
   x = x + xTrans;
   y = y + yTrans;
   drawEllipse(x, y, 50, color(x % 255, 25, 72));
-}
+};
 
 function drawEllipse(x, y, size, col) {
   fill(col);
