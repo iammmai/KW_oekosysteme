@@ -1,10 +1,11 @@
 import { CANVAS_SIZE } from "./sketch.js";
+
 export class Mover {
-  constructor(x, y, r) {
+  constructor(x, y, r, c) {
     this.loc = new p5.Vector(x, y);
-    this.vel = new p5.Vector(2, 2);
+    this.vel = new p5.Vector(0, random(5));
     this.rad = r;
-    this.col = color(200, 54, 72);
+    this.col = c;
   }
 
   display() {

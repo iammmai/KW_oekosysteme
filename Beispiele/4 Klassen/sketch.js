@@ -7,8 +7,13 @@ let movers = [];
 // Hier definiert ihr Anfangskonfigurationen wie z.B. die Groesse des Canvas
 window.setup = function () {
   createCanvas(CANVAS_SIZE, CANVAS_SIZE);
-  for (let i = 0; i < 10; i++) {
-    const mover = new Mover(random(CANVAS_SIZE), random(CANVAS_SIZE), 30);
+  for (let i = 0; i < 300; i++) {
+    const mover = new Mover(
+      random(CANVAS_SIZE),
+      random(CANVAS_SIZE),
+      random(5, 50),
+      color(random(50), random(255), random(255))
+    );
     movers.push(mover);
   }
 };
